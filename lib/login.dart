@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notiday/main.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:notiday/termos_politicas.dart';
+import 'package:notiday/recuperasenha.dart';
 import 'package:notiday/termos_politicas.dart';
 
 class _Login extends State<Login> {
@@ -135,6 +135,7 @@ class _Login extends State<Login> {
                         padding: const EdgeInsets.all(4.0),
                         child: TextField(
                           controller: _permisaoSenha,
+                          obscureText: true,
                           style: TextStyle(
                             fontSize: 10,
                           ),
@@ -158,7 +159,12 @@ class _Login extends State<Login> {
                         children: [
                           //textbutton que vai direcionar ao e-mail para enviar a nova senha.
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => RecuperaSenha()),
+                              );
+                            },
                             child: Text(
                               'Esqueceu sua senha?',
                               style: TextStyle(color: Colors.blue),

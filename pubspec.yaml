@@ -15,6 +15,8 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   cupertino_icons: ^1.0.2
   flutter_facebook_auth: ^6.1.1
+  firebase_ui_auth: ^1.13.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -26,4 +28,4 @@ flutter:
  uses-material-design: true
  assets:
     - assets/notiday.png
-  
+    - assets/bg_recuperarsenha.png

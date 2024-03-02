@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notiday/login.dart';
@@ -5,6 +6,8 @@ import 'package:notiday/main.dart';
 
 class _RegistrarState extends State<Registrar> {
   bool aceito = false;
+  String senha = '';
+  String confirmaSenha = '';
 
   @override
   Widget build(BuildContext context) {
@@ -82,13 +85,13 @@ class _RegistrarState extends State<Registrar> {
                       child: TextField(
                         style: TextStyle(fontSize: 10),
                         decoration: InputDecoration(
-                          labelText: 'NOME',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide:
-                                BorderSide(color: Colors.black, width: 5.0),
-                          ),
-                        ),
+                            labelText: 'NOME',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 5.0),
+                            ),
+                            prefixIcon: Icon(Icons.person_2_outlined)),
                       ),
                     ),
                     Padding(
@@ -101,6 +104,7 @@ class _RegistrarState extends State<Registrar> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
+                          prefixIcon: Icon(Icons.perm_identity_outlined),
                         ),
                       ),
                     ),
@@ -116,6 +120,7 @@ class _RegistrarState extends State<Registrar> {
                             borderRadius: BorderRadius.circular(30.0),
                             borderSide: BorderSide(color: Colors.black),
                           ),
+                          prefixIcon: Icon(Icons.email_outlined),
                         ),
                       ),
                     ),
@@ -130,6 +135,7 @@ class _RegistrarState extends State<Registrar> {
                             borderRadius: BorderRadius.circular(30.0),
                             borderSide: BorderSide(color: Colors.black),
                           ),
+                          prefixIcon: Icon(Icons.phone_android),
                         ),
                       ),
                     ),
@@ -138,12 +144,14 @@ class _RegistrarState extends State<Registrar> {
                       child: TextField(
                         style: TextStyle(fontSize: 5),
                         maxLines: 1,
+                        obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'SENHA',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide(color: Colors.black),
+                            borderSide: BorderSide(color: Colors.blue),
                           ),
+                          prefixIcon: Icon(Icons.vpn_key),
                         ),
                       ),
                     ),
@@ -153,6 +161,7 @@ class _RegistrarState extends State<Registrar> {
                         style:
                             TextStyle(fontSize: 5, fontWeight: FontWeight.bold),
                         maxLines: 1,
+                        obscureText: true,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.symmetric(
                               vertical: 20, horizontal: 20),
@@ -161,6 +170,7 @@ class _RegistrarState extends State<Registrar> {
                             borderRadius: BorderRadius.circular(30.0),
                             borderSide: BorderSide(color: Colors.black),
                           ),
+                          prefixIcon: Icon(Icons.check),
                         ),
                       ),
                     ),
@@ -186,7 +196,7 @@ class _RegistrarState extends State<Registrar> {
                           ? () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => Notiday(),
+                                  builder: (context) => Login(),
                                 ),
                               );
                             }
