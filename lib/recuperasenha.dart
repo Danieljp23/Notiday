@@ -57,9 +57,11 @@ class _RecuperaSenhaState extends State<RecuperaSenha> {
           ),
         ),
         body: Container(
-          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/bg_recuperasenha.png'),
+                fit: BoxFit.cover),
+          ),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -69,17 +71,20 @@ class _RecuperaSenhaState extends State<RecuperaSenha> {
                   style: TextStyle(
                       fontFamily: AutofillHints.birthday,
                       color: Colors.black,
-                      fontSize: 18),
+                      fontSize: 20),
                 ),
-                TextField(
-                  style: TextStyle(fontSize: 5),
-                  maxLines: 1,
-                  decoration: InputDecoration(
-                    labelText: 'E-mail',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextField(
+                    style: TextStyle(fontSize: 18),
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      labelText: 'E-mail',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      prefixIcon: Icon(Icons.email_outlined),
                     ),
-                    prefixIcon: Icon(Icons.email_outlined),
                   ),
                 ),
                 SizedBox(

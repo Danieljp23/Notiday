@@ -118,7 +118,7 @@ class _Login extends State<Login> {
                         padding: const EdgeInsets.all(4.0),
                         child: TextField(
                           controller: _permisaoLogin,
-                          style: TextStyle(fontSize: 10),
+                          style: TextStyle(fontSize: 18),
                           decoration: InputDecoration(
                             labelText: 'Login',
                             border: OutlineInputBorder(
@@ -137,7 +137,7 @@ class _Login extends State<Login> {
                           controller: _permisaoSenha,
                           obscureText: true,
                           style: TextStyle(
-                            fontSize: 10,
+                            fontSize: 18,
                           ),
                           decoration: InputDecoration(
                             labelText: 'Senha',
@@ -148,6 +148,7 @@ class _Login extends State<Login> {
                             ),
                           ),
                           onChanged: (value) {
+                            //função de permitir login 
                             _permitirLogin();
                           },
                         ),

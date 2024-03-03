@@ -70,7 +70,7 @@ class _RegistrarState extends State<Registrar> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 0, vertical: 70),
+                          horizontal: 0, vertical: 50),
                       child: Text(
                         'Cadastro',
                         style: TextStyle(
@@ -83,7 +83,7 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 18),
                         decoration: InputDecoration(
                             labelText: 'NOME',
                             border: OutlineInputBorder(
@@ -97,7 +97,7 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style: TextStyle(fontSize: 5),
+                        style: TextStyle(fontSize: 18),
                         maxLines: 1,
                         decoration: InputDecoration(
                           labelText: 'SOBRENOME',
@@ -111,7 +111,7 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style: TextStyle(fontSize: 5),
+                        style: TextStyle(fontSize: 18),
                         maxLines: 1,
                         decoration: InputDecoration(
                           fillColor: Colors.blue,
@@ -127,7 +127,7 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style: TextStyle(fontSize: 5),
+                        style: TextStyle(fontSize: 18),
                         maxLines: 1,
                         decoration: InputDecoration(
                           labelText: 'TELEFONE',
@@ -142,7 +142,7 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style: TextStyle(fontSize: 5),
+                        style: TextStyle(fontSize: 18),
                         maxLines: 1,
                         obscureText: true,
                         decoration: InputDecoration(
@@ -158,8 +158,8 @@ class _RegistrarState extends State<Registrar> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
-                        style:
-                            TextStyle(fontSize: 5, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
                         maxLines: 1,
                         obscureText: true,
                         decoration: InputDecoration(
