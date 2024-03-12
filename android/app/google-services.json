@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1038031173119",
+    "firebase_url": "https://notiday-app-default-rtdb.firebaseio.com",
+    "project_id": "notiday-app",
+    "storage_bucket": "notiday-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038031173119:android:27cde5b5de495f59f1e3ca",
+        "android_client_info": {
+          "package_name": "com.example.notiday"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf8Y2joW2mCP_0-fmEmA-EeROIPu4bB1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
